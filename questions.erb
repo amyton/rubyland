@@ -9,7 +9,22 @@
 		<input type="hidden" name="QuizTitle" value="Ruby Riddles" />
 		<input type="hidden" name="QuizReturnLink" value="" />
 			<ol>
+<<<<<<< HEAD
 			<li>Why is Ruby named Ruby?</li><br />
+=======
+
+			<li><%= questions[:easy][:question]%></li><br />
+
+			<%= questions[:easy][:answers].each do |answer| %>
+				<%= answer[0]
+				if answer[1] == true
+					<input type="radio" name="ans1" value="5"/>Because it's shinier than other programming languages.
+				else
+					<input type="radio" name="ans1" value="0"/>Because it's shinier than other programming languages.
+				end %>
+
+
+>>>>>>> add-questions
 			<input type="radio" name="ans1" value="0"/>Because it's shinier than other programming languages. <br />
 			<input type="radio" name="ans1" value="5"/>Because it's reflective.<br />
 			<input type="radio" name="ans1" value="0"/>It stands for Reflective Unit Based Yakima<br />
