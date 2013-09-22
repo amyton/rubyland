@@ -1,0 +1,53 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="rr.css">
+	<title>Adventures in Rubyland</title>
+</head>
+<body>	
+	<!-- Quiz Starts Here -->
+	<form action="" method="POST">
+		<input type="hidden" name="QuizTitle" value="Ruby Riddles" />
+		<input type="hidden" name="QuizReturnLink" value="" />
+			<ol>
+			<li>Why is Ruby named Ruby?</li><br />
+			<input type="radio" name="ans1" value="0"/>Because it's shinier than other programming languages. <br />
+			<input type="radio" name="ans1" value="5"/>Because it's reflective.<br />
+			<input type="radio" name="ans1" value="0"/>It stands for Reflective Unit Based Yakima<br />
+			<input type="radio" name="ans1" value="0"/>Matz really likes rubies. <br /><br />
+
+			<li>Naughty method! Which method has exhibitionist-like qualities? </li><br />
+			<input type="radio" name="ans2" value="0"/>.flash<br />
+			<input type="radio" name="ans2" value="0"/>flash::show<br />
+			<input type="radio" name="ans2" value="5"/>attr_accessor<br />
+			<input type="radio" name="ans2" value="0"/>.reveal<br /><br />
+
+			<li>How do you spell Mr. Devani's first name?</li><br />
+			<input type="radio" name="ans3" value="0"/>Shezan<br />
+			<input type="radio" name="ans3" value="0"/>Shezam<br />
+			<input type="radio" name="ans3" value="0"/>Shehan<br />
+			<input type="radio" name="ans3" value="5"/>Shehzan<br /><br />
+			</ol>
+		<p><input type="submit" value="Rate Me!" onclick="this.value='Please wait...'" /></p>
+	</form>
+	<!-- Quiz Ends Here -->
+
+	<!-- Scorecard Starts Here -->
+	<script language="JavaScript">
+	var result1 = "You're a Programming Perfectionist! We hate you.";
+	var result2 = "Roc boys in the building tonight! Oh what a feeling, I'm feelin' life!";
+	var result3 = "Aw you lil Coding Cub, you! No correct answers this time around but keep on clicking and who knows where you can go!";
+	var url = document.URL.split("?");
+	var param = url[1].split("&");
+	var score = 0;
+	for(i=0;i<param.length;i++)
+	{
+	pairParts = param[i].split("=");
+	if(pairParts[0] == "scr") score = pairParts[1];
+	}
+	if(score > 10) document.write(result1);
+	else if(score > 5) document.write(result2);
+	else document.write(result3);
+	</script>
+	<!-- Scorecard Starts Here -->
+</body>
+</html>
