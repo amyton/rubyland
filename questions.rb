@@ -18,7 +18,7 @@ class Question
   @test 
   @answers = []
   @difficulty
-    :easy, :medium
+    :easy, :medium, :hard
 
 # creating a question
   Question.new("What's ruby?", :easy)
@@ -26,7 +26,7 @@ class Question
   q.add_answer("6", false)
 
 
-  puts q.text (output the question, what's ruby?)
+  puts q.text (output the question, whats ruby?)
   answer = gets.chomp
 
   if q.answer_correct?(answer)
@@ -41,7 +41,8 @@ class Question
     end
   end
 
-  def answer_correct?(answer) - check to see if this answer is the same as the correct answer ++ test
+  def answer_correct?(answer) - check to see if this answer is the 
+    same as the correct answer ++ test
     answer == correct_answer // then it will return true
   end
 
@@ -51,6 +52,9 @@ class Question
       a.correct.first.text
     end // select always return out the array
   end
+
+
+
 
 class Answer
   @text
