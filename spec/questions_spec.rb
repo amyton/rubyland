@@ -1,7 +1,7 @@
 require "rubygems"
 require "bundler/setup"
 require "rspec"
-require_relative "../game"
+require_relative "../questions"
 
 
 describe Questions do
